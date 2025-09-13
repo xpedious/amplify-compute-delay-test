@@ -36,7 +36,7 @@
     {
       "name": "default",
       "runtime": "nodejs20.x",
-      "entrypoint": "src/index.js"
+      "entrypoint": "index.js"
     }
   ]
 }
