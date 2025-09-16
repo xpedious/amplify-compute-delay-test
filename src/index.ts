@@ -9,7 +9,7 @@ app.use(express.json())
 
 async function initializeAWSCredentials(): Promise<void> {
     try {
-        await setTimeout(10000)
+        // await setTimeout(10000)
         const credentials = await fromNodeProviderChain()()
         console.log('AWS credentials initialized successfully', credentials)
     } catch (error) {
