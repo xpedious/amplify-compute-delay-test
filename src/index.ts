@@ -1,5 +1,6 @@
 import express from 'express'
 import { fromNodeProviderChain } from '@aws-sdk/credential-providers'
+import { setTimeout } from "node:timers/promises";
 
 const app = express()
 
@@ -8,6 +9,7 @@ app.use(express.json())
 
 async function initializeAWSCredentials(): Promise<void> {
     try {
+        await setTimeout(10000)
         const credentials = await fromNodeProviderChain()()
         console.log('AWS credentials initialized successfully', credentials)
     } catch (error) {
